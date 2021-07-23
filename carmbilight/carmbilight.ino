@@ -184,19 +184,3 @@ void interrupt(){
     temp1 = 0;
   }
 }
-
-int getDiffValue(double percentage, int v1, int v2){
-  //Serial.println(percentage / 100);
-  return v1 + ((v2-v1)*(percentage/period));
-}
-
-void initRandomMap(){
-  
-}
-
-void shiftRandomMap(){   
-  for (int i = 0; i < NUMPIXELS; i++) {
-    map1[i] = map2[i];
-    map2[i] = random(15) * random(10);
-  }
-}
